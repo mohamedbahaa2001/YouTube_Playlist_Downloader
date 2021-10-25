@@ -10,8 +10,8 @@ for key,video_url in enumerate(lista):
     # print(video_url)
     video = pytube.YouTube(video_url)
     stream = video.streams.get_by_itag(22)
-    print("Donwloading..." + str(video_url))
-    stream.download(filename="lesson" + str(key))
+    print("Donwloading... " + str(video_url))
+    stream.download(filename=f"lesson{key+1}.mp4")
 
 
 print("all files donwloaded")
